@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>회원 가입</title>
+  <style>
+    * { box-sizing: border-box; font-family: Arial, sans-serif; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+    }
+
+    .wrap {
+      width: 520px;
+      text-align: center;
+      padding: 20px 10px;
+    }
+
+    h2 {
+      margin: 0 0 40px;
+      color: #2f4f6f;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .field {
+      width: 100%;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .field.full input {
+      width: 460px;
+    }
+
+    .field.inline input {
+      width: 340px;
+    }
+
+    input {
+      height: 54px;
+      padding: 12px 14px;
+      border: 2px solid #2f4f6f;
+      font-size: 18px;
+      color: #2f4f6f;
+      outline: none;
+      box-shadow: 0 3px 0 rgba(0,0,0,0.06);
+      background: #fff;
+      text-align: center;
+    }
+
+    input::placeholder {
+      color: #2f4f6f;
+      opacity: 1;
+      font-weight: 600;
+    }
+
+    .btn-small {
+      width: 100px;
+      height: 54px;
+      border: 2px solid #2f4f6f;
+      background: #fff;
+      color: #2f4f6f;
+      font-size: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 3px 0 rgba(0,0,0,0.06);
+    }
+
+    .btn-small:hover {
+      background: #2f4f6f;
+      color: #fff;
+    }
+
+    .btn-main {
+      width: 260px;
+      height: 54px;
+      margin-top: 26px;
+      border: 2px solid #2f4f6f;
+      background: #fff;
+      color: #2f4f6f;
+      font-size: 20px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 3px 0 rgba(0,0,0,0.06);
+    }
+
+    .btn-main:hover {
+      background: #2f4f6f;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+    <h2>회원 가입</h2>
+
+    <!-- 이름 -->
+    <div class="field full">
+      <input type="text" placeholder="이름" />
+    </div>
+
+    <!-- 이메일 + 인증 -->
+    <div class="field inline">
+      <input type="email" placeholder="이메일" />
+      <button type="button" class="btn-small">인증</button>
+    </div>
+
+    <!-- 비밀번호 + 인증 -->
+    <div class="field inline">
+      <input type="password" placeholder="비밀번호" />
+      <button type="button" class="btn-small">인증</button>
+    </div>
+
+    <!-- 비밀번호 재확인 -->
+    <div class="field full">
+      <input type="password" placeholder="비밀번호 재확인" />
+    </div>
+
+    <!-- 회원가입 버튼 -->
+    <button type="button" class="btn-main">회원가입</button>
+  </div>
+
+</body>
+</html>

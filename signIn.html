@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>회원 가입</title>
+  <style>
+    * { box-sizing: border-box; font-family: Arial, sans-serif; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+    }
+
+    .wrap {
+      width: 520px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 40px;
+      color: #2f4f6f;
+    }
+
+    .field {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+
+    .full input { width: 460px; }
+    .inline input { width: 340px; }
+
+    input {
+      height: 54px;
+      border: 2px solid #2f4f6f;
+      font-size: 16px;
+      text-align: center;
+    }
+
+    button {
+      height: 54px;
+      border: 2px solid #2f4f6f;
+      background: #fff;
+      color: #2f4f6f;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #2f4f6f;
+      color: #fff;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .message {
+      color: green;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrap">
+  <h2>회원 가입</h2>
+
+  <!-- 이름 -->
+  <div class="field full">
+    <input type="text" placeholder="이름">
+  </div>
+
+  <!-- 이메일 + 인증 -->
+  <div class="field inline">
+    <input type="email" id="email" placeholder="이메일">
+    <button type="button" onclick="showEmailCode()">인증</button>
+  </div>
+
+  <!-- 이메일 인증코드 -->
+  <div class="field inline hidden" id="emailCodeBox">
+    <input type="text" id="emailCode" placeholder="인증코드 입력">
+    <button type="button" onclick="verifyEmailCode()">확인</button>
+  </div>
+
+  <div class="message hidden" id="emailSuccess">
+    이메일 인증 완료
+  </div>
+
+  <!-- 비밀번호 -->
+  <div class="field inline">
+    <input type="password" placeholder="비밀번호">
+    <button type="button">인증</button>
+  </div>
+
+  <div class="field full">
+    <input type="password" placeholder="비밀번호 재확인">
+  </div>
+
+  <button style="width:260px; margin-top:20px;">회원가입</button>
+</div>
+
+<script>
+  function showEmailCode() {
+    document.getElementById("emailCodeBox").classList.remove("hidden");
+  }
+
+  function verifyEmailCode() {
+    const code = document.getElementById("emailCode").value;
+
+    if (code.trim() === "") {
+      alert("인증코드를 입력하세요.");
+      return;
+    }
+
+    // 실제로는 서버에서 코드 검증
+    document.getElementById("emailSuccess").classList.remove("hidden");
+  }
+</script>
+
+</body>
+</html>
