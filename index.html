@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffffff;
+        }
+
+        .login-container {
+            width: 360px;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 40px;
+            color: #2f4f6f;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 20px;
+            border: 2px solid #2f4f6f;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 15px;
+            border: 2px solid #2f4f6f;
+            background-color: #ffffff;
+            color: #2f4f6f;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background-color: #2f4f6f;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>로그인</h2>
+
+    <input type="email" placeholder="이메일">
+    <input type="password" placeholder="비밀번호">
+
+    <button type="button">로그인</button>
+    <button type="button">회원가입</button>
+</div>
+
+</body>
+</html>
